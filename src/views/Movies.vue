@@ -26,8 +26,19 @@
 
           <div v-else>
             <MovieCarousel :data="movies" heading="Movies for you" />
-            
-            <MobileMovieCarousel :data="movies"/>
+
+            <div class="
+                mobile--carousel
+                xs2:block
+                xs:block
+                sm:hidden
+                md:hidden
+                lg:hidden
+                xl:hidden
+              ">
+              <h2 class="text-lg mb-4 text-white">Movies for you</h2>
+              <MobileMovieCarousel :data="movies"/>
+            </div>
           </div>
         </div>
       </div>
