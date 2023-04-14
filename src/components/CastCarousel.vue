@@ -109,3 +109,59 @@
     }
   };
   </script>
+
+<style>
+
+.container {
+  width: 900px;
+}
+
+.box img {
+    min-height: 270px;
+}
+
+.carousel--container {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.carousel--container .carousel--content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transition: all 0.3s ease;
+  transform: translateY(-50%);
+}
+.carousel--container .carousel--content .box {
+  width: 180px;
+  border-radius: 0.2rem;
+}
+.carousel--container .btn {
+  cursor: pointer;
+}
+
+.btn{
+    color: #6E717D;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn.show {
+  color: #72D7F0;
+  border-color: #72D7F0;
+}
+
+.limit--text{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+</style>
