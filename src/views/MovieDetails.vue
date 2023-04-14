@@ -80,20 +80,19 @@ export default defineComponent({
             showTab: true
         }
     },
+    created() {
+        this.scrollTop()
+    },
     mounted() {
         const id = this.$route.params.id;
         this.movie_id = typeof id === "string" ? parseInt(id) : null
         
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth', 
-        });
-  
-      this.getData()
+        this.getData()
     },
     methods: {
         async getData(){
             try {
+                this.scrollTop()
                 const api_key = import.meta.env.VITE_API_KEY;
 
                 this.loading = true
@@ -117,13 +116,15 @@ export default defineComponent({
                 console.error(error);
             }finally{
                 this.loading = false 
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth', // smooth scrolling animation
-                });    
+                this.scrollTop()    
             }
         },
-      
+        scrollTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth', // smooth scrolling animation
+            }); 
+        }
     }
 });
   

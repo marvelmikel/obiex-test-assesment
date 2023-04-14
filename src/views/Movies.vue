@@ -74,16 +74,16 @@ export default defineComponent({
       backgroundImg: ''
     }
   },
+  created() {
+    this.scrollTop()
+  },
   mounted() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // smooth scrolling animation
-    });
-
     this.getMovies()
   },
   methods: {
     async getMovies(){
+      this.scrollTop()
+
       const api_key = import.meta.env.VITE_API_KEY;
       
       try {
@@ -97,10 +97,7 @@ export default defineComponent({
       }finally{
         this.loading = false     
         this.setRandomImg()  
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth', // smooth scrolling animation
-        }); 
+        this.scrollTop()
       }
     },
 
@@ -114,6 +111,13 @@ export default defineComponent({
           this.movie = null;
         }
       }
+    },
+
+    scrollTop(){
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // smooth scrolling animation
+      }); 
     }
 
   }
