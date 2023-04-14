@@ -1,5 +1,5 @@
 <template>
-    <div v-if="loading" class="flex flex-col items-center py-5">
+    <div v-if="loading" class="flex flex-col items-center py-5" style="margin-top: 5rem;">
         <div>
         <i class='bx bxs-color bx-spin text-8xl' ></i>
         </div>

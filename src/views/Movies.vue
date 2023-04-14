@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class="flex flex-col items-center py-5">
+  <div v-if="loading" class="flex flex-col items-center py-5" style="margin-top: 5rem;">
     <div>
     <i class='bx bxs-color bx-spin text-8xl' ></i>
     </div>
@@ -95,7 +95,7 @@ export default defineComponent({
       } catch (error) {
         console.log(error);        
       }finally{
-        this.loading = false     
+        // this.loading = false     
         this.setRandomImg()  
         window.scrollTo({
           top: 0,
