@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @apply min-h-screen;
+  font-family: 'Archivo', sans-serif;
+}
+
+.header {
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #1D283C;
+}
+
+/* MOBILE SEARCH BAR */
+.mobile--search{
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background: #1D283C;
+}
+
+
+
+.container {
+  width: 900px;
+}
+
+.box img {
+    min-height: 270px;
+}
+
+.carousel--container {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.carousel--container .carousel--content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transition: all 0.3s ease;
+  transform: translateY(-50%);
+}
+.carousel--container .carousel--content .box {
+  width: 180px;
+  border-radius: 0.2rem;
+}
+.carousel--container .btn {
+  cursor: pointer;
+}
+
+.btn{
+  color: #6E717D;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn.show {
+  color: #72D7F0;
+  border-color: #72D7F0;
+}
+
+.limit--text{
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+
+
+
+

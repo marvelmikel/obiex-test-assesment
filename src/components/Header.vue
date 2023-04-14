@@ -95,12 +95,3 @@ export default defineComponent({
 });
 
 </script>
-<style>
-    .mobile--search{
-        height: 80px;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-        background: #1D283C;
-    }
-</style>

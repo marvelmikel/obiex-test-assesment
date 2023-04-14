@@ -1,5 +1,4 @@
 <template>
-    
 
     <div class="grid grid-cols-2 gap-8" >
         <div v-for="(item, index) in data" :key="index">
@@ -32,6 +31,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="">
-    
-</style>
