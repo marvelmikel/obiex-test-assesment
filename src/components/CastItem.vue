@@ -1,6 +1,8 @@
 <template>
     <div class="box">
-        <img alt="" :src="`https://image.tmdb.org/t/p/original${cast.profile_path}`" />
+        <img v-if="cast.profile_path" alt="" :src="`https://image.tmdb.org/t/p/original${cast.profile_path}`" />
+        <img v-else  src="https://imgs.search.brave.com/tzb9f85RlG66PT_-suzWN3q8AyOsL_p5Uth2IAkIcD4/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/M0JLeldPY0R3SDV5/T3RONDJlWUtRSGFI/YSZwaWQ9QXBp">
+
         <div class="flex flex-col gap-3 mt-2" >
             <h1 class="text-sm limit--text" >
                 {{ cast.name }}
