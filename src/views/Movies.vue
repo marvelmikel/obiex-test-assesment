@@ -23,7 +23,12 @@
           <div v-if="movies.length < 1" class="flex justify-center">
             <h2 class="text-5xl">There are no movies at this time..</h2>
           </div>
-          <MovieCarousel :data="movies" heading="Movies for you" v-else/>
+
+          <div v-else>
+            <MovieCarousel :data="movies" heading="Movies for you" />
+            
+            <MobileMovieCarousel :data="movies"/>
+          </div>
         </div>
       </div>
     </section>
@@ -34,11 +39,12 @@
 <script lang="ts">
 import  { defineComponent } from 'vue'
 import MovieCarousel from '../components/MovieCarousel.vue'
+import MobileMovieCarousel from '../components/MobileMovieCarousel.vue';
 import Hero from '../components/Hero.vue'
 import type { Movie } from '../types/Movie'
 
 export default defineComponent({
-  components: { MovieCarousel, Hero },
+  components: { MovieCarousel, Hero, MobileMovieCarousel },
   data() {
     return {
       genres: [
