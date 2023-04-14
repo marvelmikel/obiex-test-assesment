@@ -1,6 +1,8 @@
 <template>
     <div class="box">
-        <img alt="" :src="`https://image.tmdb.org/t/p/original${cast.profile_path}`" />
+        <img v-if="cast.profile_path" alt="cast image" :src="`https://image.tmdb.org/t/p/original${cast.profile_path}`" />
+        <img v-else alt="cast image" src="https://image.tmdb.org/t/p/original/liD538lLxriRLVYzhjtOGxOPybU.jpg">
+
         <div class="flex flex-col gap-3 mt-2" >
             <h1 class="text-sm limit--text" >
                 {{ cast.name }}

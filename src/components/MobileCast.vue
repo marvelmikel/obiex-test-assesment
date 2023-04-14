@@ -3,7 +3,9 @@
 
     <div class="grid grid-cols-2 gap-8" >
         <div v-for="(item, index) in data" :key="index">
-            <img alt="" class="rounded-md" :src="`https://image.tmdb.org/t/p/original${item.profile_path}`" />
+            <img v-if="item.profile_path" alt="cast image" class="rounded-md" :src="`https://image.tmdb.org/t/p/original${item.profile_path}`" />
+            <img v-else alt="cast image" class="rounded-md" src="https://image.tmdb.org/t/p/original/liD538lLxriRLVYzhjtOGxOPybU.jpg">
+
             <div class="flex flex-col gap-3 mt-2" >
                 <h1 class="text-sm limit--text" >
                     {{ item.name }}

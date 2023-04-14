@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class="flex flex-col items-center py-5">
+  <div v-if="loading" class="flex flex-col items-center py-5" style="margin-top: 5rem;">
     <div>
     <i class='bx bxs-color bx-spin text-8xl' ></i>
     </div>
@@ -74,16 +74,16 @@ export default defineComponent({
       backgroundImg: ''
     }
   },
+  created() {
+    this.scrollTop()
+  },
   mounted() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // smooth scrolling animation
-    });
-
     this.getMovies()
   },
   methods: {
     async getMovies(){
+      this.scrollTop()
+
       const api_key = import.meta.env.VITE_API_KEY;
       
       try {
@@ -97,10 +97,7 @@ export default defineComponent({
       }finally{
         this.loading = false     
         this.setRandomImg()  
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth', // smooth scrolling animation
-        }); 
+        this.scrollTop()
       }
     },
 
@@ -114,6 +111,13 @@ export default defineComponent({
           this.movie = null;
         }
       }
+    },
+
+    scrollTop(){
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // smooth scrolling animation
+      }); 
     }
 
   }

@@ -1,7 +1,7 @@
 <template>
 
     <div class="grid grid-cols-2 gap-8" >
-        <div v-for="(item, index) in data" :key="index" @click="navigate(item.id)">
+        <div class="cursor-pointer" v-for="(item, index) in data" :key="index" @click="navigate(item.id)">
             <img alt="" class="rounded-md" :src="`https://image.tmdb.org/t/p/original${item.poster_path}`" />
             <div class="flex flex-col gap-3 mt-2" >
                 <h1 class="text-sm limit--text" >

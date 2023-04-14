@@ -111,7 +111,7 @@ export default defineComponent({
                 let mins = minutes % 60;
                 return `${hours}h ${mins}m`;
             }
-            return '';
+            return '2hr 30min';
         }, 
         formatVote(){
             return this.movie.vote_average ? this.movie.vote_average.toFixed(1) : ''
