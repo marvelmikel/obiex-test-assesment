@@ -95,7 +95,7 @@ export default defineComponent({
       } catch (error) {
         console.log(error);        
       }finally{
-        // this.loading = false     
+        this.loading = false     
         this.setRandomImg()  
         window.scrollTo({
           top: 0,
