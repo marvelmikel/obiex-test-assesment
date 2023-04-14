@@ -113,9 +113,6 @@
 
 <style>
 
-/* .container {
-  width: 900px;
-} */
 
 .box img {
     min-height: 270px;
